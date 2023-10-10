@@ -1,0 +1,19 @@
+/* Hier komt de code van de producten pagina */
+
+/* Alle producten uitlijnen/positioneren */
+.producten {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap:10%;
+    justify-items: center;
+}
+/* Het product stylen */
+.product-style{
+    display: grid;
+    background-color: #f7f7f7;
+    width: 21.5rem;
+}
+/* Prijs btn/bekijk plant */
+.product-btn{
+    align-self: end;
+}

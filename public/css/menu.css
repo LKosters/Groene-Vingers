@@ -1,0 +1,187 @@
+.primary-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  transition: background-color 200ms;
+  color: white;
+
+  font-size: 110%;
+}
+
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.navbar {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: heigth 200ms;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  transition: color 200ms;
+}
+
+header.active {
+  background-color: #fff;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+header.active img {
+  content: url(../img/LogoGV-Zwart.png);
+}
+
+header.active svg {
+  fill: black;
+}
+
+.header.active .navbar {
+  height: 6rem;
+}
+
+.header.active .logo,
+.header.active .nav-link {
+  color: #313131;
+}
+
+.header.active .nav-link:hover {
+  color: #808080;
+}
+
+.activep {
+  font-weight: bold;
+  color: #6cc63f;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6cc63f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu,
+.closeIcon,
+.hamburger {
+  display: none;
+}
+
+.option{
+    color: black!important;
+}
+select option:hover{
+    background-color: #6CC63F!important;
+}
+option:hover { background-color: red!important; }
+
+@media only screen and (max-width: 600px) {
+  .nav-link {
+    display: none;
+  }
+
+  .activep {
+    display: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .lang-select{
+      display: block;
+      margin: 2rem 3.4rem;
+      font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
+  }
+  .contactinfo{
+      margin-bottom: 1rem;
+  }
+
+  .menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 1.5rem;
+    right: 1rem;
+    padding: 4px;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+  }
+
+  .closeIcon {
+    display: none;
+    color: white;
+  }
+
+
+  .menu {
+    display: block;
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #6cc63f;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    list-style: none;
+    padding-top: 4rem;
+    fill: black;
+  }
+
+  .showMenu {
+    transform: translateY(0);
+  }
+}

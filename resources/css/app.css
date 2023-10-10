@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    width: 1280px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 100% !important;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.regular-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.regular-bottom-padding {
+    padding-bottom: 100px;
+}
+
+.border-primary {
+    border: solid 3px #6CC63F;
+}
+
+.border-bottom-primary {
+    border-bottom: solid 3px #6CC63F;
+}
+
+.small-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bg-color-primary {
+    background-color: #6CC63F;
+}
+.color-primary{
+    color: #6CC63F;
+}
+
+.bg-color-dark {
+    background-color: #363537;
+}
+
+.button-white-arrow, .button-white-arrow img {
+    transition: 200ms;
+}
+
+.button-white-arrow:hover {
+    color: #6CC63F;
+}
+
+.button-white-arrow:hover img {
+    filter: brightness(0) saturate(100%) invert(68%) sepia(9%) saturate(3094%) hue-rotate(56deg) brightness(100%) contrast(86%);
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+h2, h3 {
+    color: #363537;
+}
+
+footer a, footer img, .dashboard-sidebar a, .dashboard-sidebar img, .image-hover-green img{
+    transition: 200ms;
+}
+
+footer a:hover, .dashboard-sidebar a:hover, .active-dashboard {
+    color: #6CC63F;
+}
+
+footer a:hover img, .dashboard-sidebar a:hover img, .active-dashboard img {
+    filter: brightness(0) saturate(100%) invert(68%) sepia(9%) saturate(3094%) hue-rotate(56deg) brightness(100%) contrast(86%);
+}
+
+.product-slider-hover p{
+    opacity: 0 !important;
+    transition: 200ms;
+}
+
+.product-slider-hover {
+    transform: translateY(25px);
+    transition: 200ms;
+}
+
+.product-carousel .carousel-item {
+    background-color: #f7f7f7;
+}
+
+.product-carousel .carousel-item:hover .product-slider-hover{
+    transform: translateY(0px) !important;
+}
+
+.product-carousel .carousel-item:hover .product-slider-hover p{
+    opacity: 1 !important;
+}
+
+@media (max-width: 1280px) {
+    .coming-soon-popup {
+        display: none !important;
+    }
+}
+.coming-soon-popup {
+    transform: translateX(500px);
+    transition: 200ms;
+}
+
+.coming-soon-popup img {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(324deg) brightness(100%) contrast(104%);
+    transition: 200ms;
+}
+
+
+.coming-soon-popup:hover {
+    transform: translateX(0px) !important;
+}
+
+.coming-soon-popup:hover img, .image-hover-green:hover img {
+    filter: invert(65%) sepia(97%) saturate(319%) hue-rotate(53deg) brightness(88%) contrast(92%);
+}
+
+.open-close-sidebar:hover .dashboard-sidebar{
+    display: block !important;
+}
+
+@media (min-width: 1280px) {
+    .open-close-sidebar {
+        display: none;
+    }
+
+    .width-350-desktop {
+        width: 350px !important;
+    }
+}
+
+.hovercontainer {
+    height: 430px;
+  position: relative;
+  }
+  .hovercontainer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+      border-radius: 0.375rem;
+    bottom: 0;
+    transition: height 0.3s ease-out;
+    background: linear-gradient(to bottom, rgba(47, 47, 47, 0.03) , rgba(47,47,47,0.8));
+  }
+  .hovercontainer:hover:before {
+    height: 100%;
+  }
+
+  .hovercontainer:hover .image {
+    height: 300px;
+  widtH: 300px;
+  position: relative;
+  }
+
+.texthover{
+    opacity: 0;
+}
+.texthover:before{
+    opacity: 0;
+    transition: height 0.3s ease-out;
+}
+
+.hovercontainer:hover .texthover{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 1!important;
+
+  }
+
+/*----------------------- Preloader -----------------------*/
+body.preloader-site {
+    overflow: hidden;
+}
+
+.preloader-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+table td:not(:last-child), table th:not(:last-child) {
+    border-right: 1px solid #363537;
+    border-spacing: 30px;
+}
+table td {
+    border-top: 1px solid #363537;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+#map {
+    height: 500px;
+  }
+
+  /*
+   * Optional: Makes the sample page fill the window.
+   */
+
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}

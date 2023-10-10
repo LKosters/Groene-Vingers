@@ -1,0 +1,56 @@
+
+#accordion {
+    max-width: 500px;
+    margin:0 auto;
+}
+
+.menu1 {
+    border:2px solid #6CC63F;
+    background-color: #F7F7F7;
+}
+
+
+
+.header1 {
+    display:flex;
+    padding:10px;
+    cursor: pointer;
+}
+
+.title1 {
+    flex:1;
+}
+
+.icon1 {
+    width:20px;
+}
+
+/* .content {
+ padding:10px;
+ display: none;
+}  */
+
+
+.content1{
+    max-height: 0;
+    transition: max-height 2s ease-out;
+    overflow: hidden;
+}
+
+.content-transition1 {
+    max-height: 1500px;
+    transition: max-height 3s ease-in;
+}
+.card{
+    background-color: #F7F7F7;
+}
+input:focus, textarea:focus{
+    --tw-ring-opacity: 1;
+    --tw-ring-color:#6CC63F!important;
+    border-color:#6CC63F !important;
+}
+.imggreen{
+    font-size: smaller;
+    filter: brightness(0) saturate(100%) invert(68%) sepia(9%) saturate(3094%) hue-rotate(56deg) brightness(100%) contrast(86%);
+}
+
